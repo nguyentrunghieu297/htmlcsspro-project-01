@@ -105,6 +105,51 @@
     .features .list {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .stats .row {
+        flex-direction: column;
+    }
+
+    .stats .img-block,
+    .stats .info {
+        width: 100%;
+    }
+
+    .stats .img-block {
+        order: 2;
+        margin-top: 80px;
+    }
+
+    .stats .info {
+        padding: 0;
+        order: 1;
+    }
+
+    .stats .info .sub-title {
+        width: 60%;
+    }
+
+    .stats .row.row-qty {
+        flex-direction: row;
+    }
+
+    .stats .row.row-qty .qty {
+        font-size: 5rem;
+    }
+
+    .stats .row.row-qty .qty-desc {
+        font-size: 1.5rem;
+    }
+
+    .subscription .body .subscript-img {
+        display: none;
+    }
+
+    .footer .row-top {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        row-gap: 80px;
+    }
 }
 
 /* Tablet */
@@ -116,6 +161,10 @@
 
 /* Mobile */
 @media screen and (max-width: 767.98px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
     .menu-drawer {
         padding: 38px;
         inset: 0 25% 0 0;
@@ -123,5 +172,102 @@
 
     .navbar .actions {
         display: none;
+    }
+
+    .header {
+        height: calc(100vh - 70px);
+    }
+
+    .hero .sub-title {
+        margin-top: 64px;
+        font-size: 1.5rem;
+    }
+
+    .hero .title {
+        margin-top: 16px;
+        font-size: 5.2rem;
+    }
+
+    .hero .desc {
+        width: 100%;
+    }
+
+    .row-client {
+        row-gap: 20px;
+    }
+
+    .list-guide {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    .guide-cta {
+        margin-top: 70px;
+    }
+
+    .features .link {
+        display: none;
+    }
+
+    .features .list {
+        grid-template-columns: 1fr;
+    }
+
+    .features .view-all {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    .stats .info .sub-title {
+        width: 100%;
+    }
+
+    .stats .img-block .stat-img {
+        width: 100%;
+    }
+
+    .stats .stats-trend {
+        top: -20px;
+        left: -20px;
+        border-radius: 12px;
+    }
+
+    .stats .row.row-qty {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 60px;
+    }
+
+    .subscription .body .info {
+        margin: 42px 32px;
+    }
+
+    .subscription .body {
+        height: auto;
+    }
+
+    .footer .row-top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer .row-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 24px;
+    }
+}
+
+/* Mobile SE */
+@media screen and (max-width: 576px) {
+    .content {
+        max-width: calc(100% - 32px);
+    }
+    .header {
+        padding-top: 32px;
+    }
+
+    .features .sub-title {
+        font-size: 3rem;
     }
 }
